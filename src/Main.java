@@ -6,13 +6,9 @@ public class Main {
         int maxExpense = expenses1[0];
 
         for (int expense : expenses1) {
-            if (expense < minExpense) {
-                minExpense = expense;
-            }
-            if (expense > maxExpense) {
-                maxExpense = expense;
-            }
+            maxExpense += expense;
         }
+
 
         System.out.println("Минимальная сумма трат за неделю составила " + minExpense + " рублей.");
         System.out.println("Максимальная сумма трат за неделю составила " + maxExpense + " рублей.");
@@ -26,9 +22,12 @@ public class Main {
         double middleAverage = (double) total1 / expenses2.length;
         System.out.println("Средняя сумма трат за месяц составила " + middleAverage + " рублей.");
 
-        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length - 1; i >= 0; i--) {
-            System.out.print(reverseFullName[i]);
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        char[] reverseName = new char[reverseFullName.length];
+
+        for (int i = 0; i < reverseFullName.length; i++) {
+            reverseName[i] = reverseFullName[reverseFullName.length - 1 - i];
+            System.out.print(reverseName[i]);
         }
     }
 }
